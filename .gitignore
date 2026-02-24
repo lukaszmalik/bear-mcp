@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.egg-info/
+.DS_Store
+.mcp.json
+.claude/
+
+# scratch / research
+clone-my-repos.sh
+mcp-servers-research.md
+org-repos*.md
