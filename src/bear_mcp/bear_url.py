@@ -32,7 +32,7 @@ def create_note(title: str, body: str, tags: str | None = None) -> None:
     Args:
         title: Note title (will be shown as # heading).
         body: Markdown body content.
-        tags: Comma-separated tags (without #), e.g. 'ai/claude/chats'.
+        tags: Comma-separated tags (without #), e.g. 'ai/chats'.
     """
     text = f"# {title}\n\n{_strip_leading_h1(body)}"
     if tags:
@@ -95,14 +95,14 @@ def trash_note(title: str) -> str:
 
 
 def save_chat(title: str, content: str, subtag: str | None = None) -> None:
-    """Save content as a Bear note under #ai/claude/chats.
+    """Save content as a Bear note under #ai/chats.
 
     Args:
         title: Note title.
         content: Markdown content to save.
         subtag: Optional subtag (devops/code/work/howto).
     """
-    tags_line = "#ai/claude/chats"
+    tags_line = "#ai/chats"
     if subtag:
         tags_line += f"/{subtag}"
 

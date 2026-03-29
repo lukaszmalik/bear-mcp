@@ -5,7 +5,3 @@ __pycache__/
 .mcp.json
 .claude/
 
-# scratch / research
-clone-my-repos.sh
-mcp-servers-research.md
-org-repos*.md

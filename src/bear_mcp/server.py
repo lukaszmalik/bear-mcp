@@ -60,7 +60,7 @@ def bear_create(title: str, body: str, tags: str | None = None) -> str:
     Args:
         title: Note title.
         body: Markdown body content.
-        tags: Optional comma-separated tags without # (e.g. 'ai/claude/chats,documents/work').
+        tags: Optional comma-separated tags without # (e.g. 'ai/chats,documents/work').
     """
     bear_url.create_note(title, body, tags)
     return f"Created note: {title}"
@@ -88,7 +88,7 @@ def bear_trash(title: str) -> str:
 
 @mcp.tool()
 def bear_save_chat(title: str, content: str, subtag: str | None = None) -> str:
-    """Save content as a Bear note under #ai/claude/chats.
+    """Save content as a Bear note under #ai/chats.
 
     Args:
         title: Note title.
@@ -96,7 +96,7 @@ def bear_save_chat(title: str, content: str, subtag: str | None = None) -> str:
         subtag: Optional subtag: devops, code, work, or howto.
     """
     bear_url.save_chat(title, content, subtag)
-    tag_str = f"#ai/claude/chats/{subtag}" if subtag else "#ai/claude/chats"
+    tag_str = f"#ai/chats/{subtag}" if subtag else "#ai/chats"
     return f"Saved to Bear: {title} ({tag_str})"
 
 
